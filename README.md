@@ -50,3 +50,6 @@
         i. Рейтинг — int
     3. Заказ:
         a. id — 
+
+Реляционная схема:
+![alt tag](https://sun9-52.userapi.com/impg/tD501D0oi0OACUAQdeval3IPzugMCXF33k0t9w/-BiA-aWP1s0.jpg?size=936x640&quality=96&sign=fbbe23c5c2016b6dad56cf827486f6f2&type=album)
