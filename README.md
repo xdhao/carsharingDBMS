@@ -31,9 +31,9 @@
 * Рассчитать количество синих Kia.
 
 Список сущностей:
-1. Cars:
+1. Автомобили:
 * id — int
-* name — char
+* Название — char
 * GPS координаты — char
 * Номер — char
 * Уровень топлива — int
@@ -48,8 +48,10 @@
 * Фото с паспортом — char (ссылка на файл на сервере)
 * Номер водительских прав — int
 * Рейтинг — int
-3. Заказ:
-* id — 
+3. Заказы:
+* id — int
+* GPS координаты вызова — char
+* Дата проката и время — date
 
 Реляционная схема:
 ![alt tag](https://sun9-52.userapi.com/impg/tD501D0oi0OACUAQdeval3IPzugMCXF33k0t9w/-BiA-aWP1s0.jpg?size=936x640&quality=96&sign=fbbe23c5c2016b6dad56cf827486f6f2&type=album)
