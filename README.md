@@ -31,25 +31,25 @@
 * Рассчитать количество синих Kia.
 
 Список сущностей:
-    1. Cars:
-        a. id — int
-        b. name — char
-        c. GPS координаты — char
-        d. Номер — char
-        e. Уровень топлива — int
-        f. Кол-во передач — int
-    2. Клиенты:
-        a. id — int
-        b. Имя — char
-        c. Фамилия — char
-        d. Отчество — char
-        e. Номер телефона — int
-        f. Паспортные данные — char
-        g. Фото с паспортом — char (ссылка на файл на сервере)
-        h. Номер водительских прав — int
-        i. Рейтинг — int
-    3. Заказ:
-        a. id — 
+1. Cars:
+* id — int
+* name — char
+* GPS координаты — char
+* Номер — char
+* Уровень топлива — int
+* Кол-во передач — int
+2. Клиенты:
+* id — int
+* Имя — char
+* Фамилия — char
+* Отчество — char
+* Номер телефона — int
+* Паспортные данные — char
+* Фото с паспортом — char (ссылка на файл на сервере)
+* Номер водительских прав — int
+* Рейтинг — int
+3. Заказ:
+* id — 
 
 Реляционная схема:
 ![alt tag](https://sun9-52.userapi.com/impg/tD501D0oi0OACUAQdeval3IPzugMCXF33k0t9w/-BiA-aWP1s0.jpg?size=936x640&quality=96&sign=fbbe23c5c2016b6dad56cf827486f6f2&type=album)
