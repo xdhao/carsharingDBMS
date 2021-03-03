@@ -52,6 +52,25 @@
 * id — int
 * GPS координаты вызова — char
 * Дата проката и время — date
+4. Заказы:
+* id — int
+* Название — char
+4. Тарифы:
+* id — int
+* Название — char
+* Стоимость тарифа — date
+4. Приводы:
+* id — int
+* Название — char
+4. Бренды:
+* id — int
+* Название — char
+4. Типы трансмиссии:
+* id — int
+* Название — char
+4. Цвета:
+* id — int
+* Название — char
 
 Реляционная схема:
 ![alt tag](https://sun9-52.userapi.com/impg/tD501D0oi0OACUAQdeval3IPzugMCXF33k0t9w/-BiA-aWP1s0.jpg?size=936x640&quality=96&sign=fbbe23c5c2016b6dad56cf827486f6f2&type=album)
