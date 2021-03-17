@@ -87,5 +87,7 @@
 # Реляционная схема:
 Учёт автомобилей:
 ![alt tag](https://sun9-30.userapi.com/impg/8yA_ahn7WiMWbU0qy9lskfjcpXsv5QBHI6cySw/SBT2chP8G3A.jpg?size=1437x649&quality=96&sign=4ced54730ab013ddaf57afcd6a3bf5de&type=album)
+Учёт клиентов и заказов:
+![alt tag](https://sun9-8.userapi.com/impg/mptoBpU9GMJfWw0a3MYOPRV0B2dTLaEihttyZg/kRMGcrwIZsU.jpg?size=915x561&quality=96&sign=9755da13e025781823ee3a80176cda42&type=album)
 # UML Use-Case диаграмма: 
 ![alt tag](https://sun9-20.userapi.com/impg/xSm6JcvnS8Khi4089h4X_FRRedFUsE08giTtSQ/Rpb5QyqvnBc.jpg?size=483x542&quality=96&sign=00ddf7ba4b5795e06b81b7092721460c&type=album)
