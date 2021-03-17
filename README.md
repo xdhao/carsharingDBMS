@@ -85,6 +85,7 @@
 * Заказы - один ко многим - Клиенты
 
 # Реляционная схема:
-![alt tag](https://sun9-52.userapi.com/impg/tD501D0oi0OACUAQdeval3IPzugMCXF33k0t9w/-BiA-aWP1s0.jpg?size=936x640&quality=96&sign=fbbe23c5c2016b6dad56cf827486f6f2&type=album)
+Учёт автомобилей:
+![alt tag](https://sun9-30.userapi.com/impg/8yA_ahn7WiMWbU0qy9lskfjcpXsv5QBHI6cySw/SBT2chP8G3A.jpg?size=1437x649&quality=96&sign=4ced54730ab013ddaf57afcd6a3bf5de&type=album)
 # UML Use-Case диаграмма: 
 ![alt tag](https://sun9-20.userapi.com/impg/xSm6JcvnS8Khi4089h4X_FRRedFUsE08giTtSQ/Rpb5QyqvnBc.jpg?size=483x542&quality=96&sign=00ddf7ba4b5795e06b81b7092721460c&type=album)
