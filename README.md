@@ -154,6 +154,6 @@ PostgreSQL, Oracle SQL, MongoDB
 Учёт автомобилей:
 ![alt tag](https://github.com/xdhao/carsharingDBMS/blob/main/Images/CarDiagramImage2.png)
 Учёт клиентов и заказов:
-![alt tag](https://sun9-14.userapi.com/impg/WYJtG_X6Wu5lstqlTNwFmWTVsr6zH3pOYx16Eg/vlHuhAqM11I.jpg?size=988x547&quality=96&sign=5f917f3b3d6d65eca67133969892970d&type=album)
+![alt tag](https://sun9-35.userapi.com/impg/R38MDPgH3vmHa15OiimKpjsyrv1-ZPH-A2nGHg/w_JmQXXAIKA.jpg?size=978x502&quality=96&sign=6214ee52654be395280a5440eb9899c4&type=album)
 # UML Use-Case диаграмма: 
 ![alt tag](https://sun9-20.userapi.com/impg/xSm6JcvnS8Khi4089h4X_FRRedFUsE08giTtSQ/Rpb5QyqvnBc.jpg?size=483x542&quality=96&sign=00ddf7ba4b5795e06b81b7092721460c&type=album)
