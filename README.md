@@ -152,7 +152,7 @@ PostgreSQL, Oracle SQL, MongoDB
 
 # Реляционная схема:
 Учёт автомобилей:
-![alt tag](https://github.com/xdhao/carsharingDBMS/blob/main/Images/CarDiagramImage.png)
+![alt tag](https://github.com/xdhao/carsharingDBMS/blob/main/Images/CarDiagramImage2.png)
 Учёт клиентов и заказов:
 ![alt tag](https://sun9-14.userapi.com/impg/WYJtG_X6Wu5lstqlTNwFmWTVsr6zH3pOYx16Eg/vlHuhAqM11I.jpg?size=988x547&quality=96&sign=5f917f3b3d6d65eca67133969892970d&type=album)
 # UML Use-Case диаграмма: 
