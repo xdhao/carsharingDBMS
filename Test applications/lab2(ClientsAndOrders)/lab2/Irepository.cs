@@ -10,5 +10,6 @@ namespace lab2
         bool AddReviews(Reviews newreviews);
         void DeleteReviews(Reviews newrivews);
         bool UpdateReviews(Reviews newreviews);
+        string CalculationOfCost(Clients newClients);
     }
 }

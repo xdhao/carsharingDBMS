@@ -8,16 +8,16 @@ namespace lab2
 {
     public class OracleRepository : Irepository
     {
-        string connectionString = "Data Source = (DESCRIPTION ="+
-        " (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))"+
-        " (CONNECT_DATA ="+
-        "  (SERVER = DEDICATED)"+
-        "  (SERVICE_NAME = orcle)"+
-        " )"+
+        string connectionString = "Data Source = (DESCRIPTION =" +
+        " (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
+        " (CONNECT_DATA =" +
+        "  (SERVER = DEDICATED)" +
+        "  (SERVICE_NAME = orcle)" +
+        " )" +
         ");User Id = SYS;password = 3004;DBA Privilege=SYSDBA;";
         public bool AddReviews(Reviews newreviews)
         {
-            try 
+            try
             {
                 using (OracleConnection con = new OracleConnection(connectionString))
                 {
@@ -104,5 +104,28 @@ namespace lab2
                 return false;
             }
         }
+
+
+        public string CalculationOfCost(Clients newClients)
+        {
+            using (OracleConnection con = new OracleConnection(connectionString))
+            {
+                con.Open();
+                string calcucat = "select value*calculationcost(raiting) from clients " +
+                "join orders on clients.id = orders.id_clients " +
+                "join tarrifs on tarrifs.id = orders.id_tarrifs " +
+                "where clients.id = :id";
+                using (OracleCommand command = new OracleCommand(calcucat, con))
+                {
+                    OracleParameter parameter = new OracleParameter("id", newClients.id);
+                    command.Parameters.Add(parameter);
+                    object count = command.ExecuteScalar();
+                    return count.ToString();
+                }
+
+            }
+
+        }
     }
 }
+
