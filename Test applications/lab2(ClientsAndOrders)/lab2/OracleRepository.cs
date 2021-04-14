@@ -22,7 +22,7 @@ namespace lab2
                 using var con = new OracleConnection(connectionString);
                 con.Open();
                 string query = "INSERT INTO reviews (text, raiting, vin, id_clients) VALUES (:text, :raiting, :vin, :id_clients)";
-                OracleCommand command = new OracleCommand(query, con);
+                using var command = new OracleCommand(query, con);
                 OracleParameter[] parameters = new OracleParameter[] {
                     new OracleParameter("text", newreviews.text),
                     new OracleParameter("raiting", newreviews.raiting),
@@ -77,7 +77,7 @@ namespace lab2
                     new OracleParameter("vin", newreviews.vin),
                     new OracleParameter("id_clients", newreviews.id_clients),
                     new OracleParameter("id", newreviews.id)
-            };
+                };
                 command.Parameters.AddRange(parameters);
                 command.ExecuteNonQuery();
                 return true;
