@@ -157,3 +157,18 @@ PostgreSQL, Oracle SQL, MongoDB
 ![alt tag](https://sun9-35.userapi.com/impg/R38MDPgH3vmHa15OiimKpjsyrv1-ZPH-A2nGHg/w_JmQXXAIKA.jpg?size=978x502&quality=96&sign=6214ee52654be395280a5440eb9899c4&type=album)
 # UML Use-Case диаграмма: 
 ![alt tag](https://sun9-20.userapi.com/impg/xSm6JcvnS8Khi4089h4X_FRRedFUsE08giTtSQ/Rpb5QyqvnBc.jpg?size=483x542&quality=96&sign=00ddf7ba4b5795e06b81b7092721460c&type=album)
+# Макеты Android приложения:
+![alt tag](https://github.com/xdhao/carsharingDBMS/blob/main/Images/Authorization_screen.png)
+Макет 1 -- Экран авторизации и регистрации
+![alt tag](https://github.com/xdhao/carsharingDBMS/blob/main/Images/Map_hide.png)
+Макет 2 -- Экран выбора автомобиля
+![alt tag](https://github.com/xdhao/carsharingDBMS/blob/main/Images/Map_show.png)
+Макет 3 -- Экран выбора автомобиля с данными автомобиля
+![alt tag](https://github.com/xdhao/carsharingDBMS/blob/main/Images/Settings.png)
+Макет 4 -- Экран настроек
+![alt tag](https://github.com/xdhao/carsharingDBMS/blob/main/Images/Settings_change_login.png)
+Макет 5 -- Экран с окном редактирования логина
+![alt tag](https://github.com/xdhao/carsharingDBMS/blob/main/Images/Settings_change_password.png)
+Макет 6 -- Экран с окном редактирования пароля
+![alt tag](https://github.com/xdhao/carsharingDBMS/blob/main/Images/Settings_change_personal.png)
+Макет 6 -- Экран с окном редактирования ФИО
