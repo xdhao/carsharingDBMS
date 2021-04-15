@@ -19,11 +19,12 @@ namespace lab2
             {
                 Console.WriteLine(review);
             }*/
-            var raitingClients = myRep.GetRatingOutput();
+            /*var raitingClients = myRep.GetRatingOutput();
             foreach(var raitingClient in raitingClients)
             {
                 Console.WriteLine(raitingClient);
-            }
+            }*/
+            string percent = myRep.PercentToRaiting(new Clients(0, "", "", "", "", "", "", "", 4.5, 0));
         }
     }
 }
