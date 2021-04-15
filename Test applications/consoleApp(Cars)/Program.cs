@@ -76,7 +76,7 @@ namespace DataBaseConnect
             using var con = new NpgsqlConnection(connectionString);
             con.Open();
 
-            using var cmd = new NpgsqlCommand($"SELECT cars.fuel_level, engines.fuel_consumption FROM cars, engines WHERE cars.id_engine = engines.id AND cars.id = { id};", con);
+            using var cmd = new NpgsqlCommand($"SELECT * FROM cars WHERE fuel_level > 5;", con);
             
             var reader = cmd.ExecuteReader();
             var result = new List<Cars>();
