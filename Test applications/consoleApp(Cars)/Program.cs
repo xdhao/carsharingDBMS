@@ -52,7 +52,7 @@ namespace DataBaseConnect
             var reader = cmd.ExecuteReader();
             reader.Read();
 
-            return reader.GetFloat(0) * reader.GetInt32(1);
+            return reader.GetFloat(0) * reader.GetInt32(1) * 100;
         }
         public IEnumerable<Cars> GetAll()
         {
