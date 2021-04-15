@@ -25,6 +25,7 @@ namespace lab2
                 Console.WriteLine(raitingClient);
             }*/
             string percent = myRep.PercentToRaiting(new Clients(0, "", "", "", "", "", "", "", 4.5, 0));
+            Console.WriteLine(percent);
         }
     }
 }
