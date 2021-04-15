@@ -105,6 +105,20 @@ namespace lab2
             object count = command.ExecuteScalar();
             return count.ToString();
         }
+        public Ienumerable<Clients> GetRatingOutput()
+        {
+            var result = new List<Clients>();
+            using var con = new OracleConnection(connectionString);
+            con.Open();
+            string raiting = "SELECT * FROM clients WHERE raiting > 4.5";
+            using var command = new OracleCommand(rating, con);
+            using var readreClie = command.ExecuteReader();
+            while (readreClie.Read())
+            {
+                result.Add(new Clients(readreClie.GetInt32(0), readreClie.GetString(1), readreClie.GetString(2), readreClie.GetString(3), readreClie.GetString(4), readreClie.GetString(5), readreClie.GetString(6), readreClie.GetString(7), readreClie.GetFloat(8), readreClie.GetInt32(9)));
+            }
+            return result;
+        }
     }
 }
 
