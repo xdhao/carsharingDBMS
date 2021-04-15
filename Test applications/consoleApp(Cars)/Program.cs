@@ -59,7 +59,7 @@ namespace DataBaseConnect
             using var con = new NpgsqlConnection(connectionString);
             con.Open();
 
-            using var cmd = new NpgsqlCommand($"SELECT * FROM cars WHERE id_transmission in (SELECT id FROM transmissions WHERE id_transmission_type in (SELECT id FROM transmission_types WHERE name = "Автоматическая" OR name = "Роботизированная"));", con);
+            using var cmd = new NpgsqlCommand($"SELECT cars.id, cars.year, cars.fuel_level, cars.environmental_class FROM cars JOIN transmissions ON cars.id_transmission = transmissions.id JOIN transmission_types ON transmissions.id_transmissions_type = transmission_types.id WHERE transmission_types.name = 'Автоматическая' OR transmission_types.name = 'Роботизированная';", con);
             
             var reader = cmd.ExecuteReader();
             var result = new List<Cars>();
