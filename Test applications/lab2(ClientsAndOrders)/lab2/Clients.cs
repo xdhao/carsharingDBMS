@@ -30,6 +30,10 @@ namespace lab2
             this.raiting = raiting;
             this.id_offices = id_offices;
         }
+        public override string ToString()
+        {
+            return $"{id}, {name}, {surname}, {patronymic}, {login}, {password}, {passport_data}, {number_driver_licence}, {raiting}, {id_offices}";
+        }
     }
 
 }
