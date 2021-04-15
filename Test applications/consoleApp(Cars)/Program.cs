@@ -54,6 +54,40 @@ namespace DataBaseConnect
 
             return reader.GetFloat(0) * reader.GetInt32(1) * 100;
         }
+        public IEnumerable<Cars> GetAutomat()
+        {
+            using var con = new NpgsqlConnection(connectionString);
+            con.Open();
+
+            using var cmd = new NpgsqlCommand($"SELECT * FROM cars WHERE id_transmission in (SELECT id FROM transmissions WHERE id_transmission_type in (SELECT id FROM transmission_types WHERE name = "Автоматическая" OR name = "Роботизированная"));", con);
+            
+            var reader = cmd.ExecuteReader();
+            var result = new List<Cars>();
+
+            while (reader.Read())
+            {
+                result.Add(new Cars(reader.GetInt32(0), reader.GetInt32(1), reader.GetFloat(2), reader.GetInt32(3)));
+            }
+
+            return result;
+        }
+        public IEnumerable<Cars> GetHighFuelLevel()
+        {
+            using var con = new NpgsqlConnection(connectionString);
+            con.Open();
+
+            using var cmd = new NpgsqlCommand($"SELECT cars.fuel_level, engines.fuel_consumption FROM cars, engines WHERE cars.id_engine = engines.id AND cars.id = { id};", con);
+            
+            var reader = cmd.ExecuteReader();
+            var result = new List<Cars>();
+
+            while (reader.Read())
+            {
+                result.Add(new Cars(reader.GetInt32(0), reader.GetInt32(1), reader.GetFloat(2), reader.GetInt32(3)));
+            }
+
+            return result;
+        }
         public IEnumerable<Cars> GetAll()
         {
             using var con = new NpgsqlConnection(connectionString);
@@ -125,7 +159,13 @@ namespace DataBaseConnect
                         DeleteCar(myRep);
                         break;
                     case 'r':
-                        CustomRequest(myRep);
+                        RangeRequest(myRep);
+                        break;
+                    case 'c':
+                        AutomatRequest(myRep);
+                        break;
+                    case 'h':
+                        HighFuelLevelRequest(myRep);
                         break;
                     case 'x':
                         Console.WriteLine("Выход из программы...");
@@ -185,16 +225,32 @@ namespace DataBaseConnect
 
             myRep.Delete(id);
         }
-        static void CustomRequest(IRepository<Cars> myRep)
+        static void RangeRequest(IRepository<Cars> myRep)
         {
             int id;
-
+        
             Console.WriteLine("Введите ID автомобиля");
             id = Convert.ToInt32(Console.ReadLine());
 
             float range = myRep.GetRange(id);
 
             Console.WriteLine($"Осталось километров: {range}");
+        }
+        static void AutomatRequest(IRepository<Cars> myRep)
+        {
+            var carsList = new List<Cars>(myRep.GetAutomat());
+
+            Console.WriteLine($"id\tyear\tfuel_level\tevironmental_class");
+            for (int i = 0; i < carsList.Count; i++)
+                Console.WriteLine($"{carsList[i].Id}\t{carsList[i].Year}\t{carsList[i].Fuel}\t\t{carsList[i].Env_class}");
+        }
+        static void HighFuelLevelRequest(IRepository<Cars> myRep)
+        {
+            var carsList = new List<Cars>(myRep.GetHighFuelLevel());
+
+            Console.WriteLine($"id\tyear\tfuel_level\tevironmental_class");
+            for (int i = 0; i < carsList.Count; i++)
+                Console.WriteLine($"{carsList[i].Id}\t{carsList[i].Year}\t{carsList[i].Fuel}\t\t{carsList[i].Env_class}");
         }
     }
 }
