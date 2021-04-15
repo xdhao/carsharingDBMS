@@ -12,5 +12,6 @@ namespace lab2
         bool UpdateReviews(Reviews newreviews);
         string CalculationOfCost(Clients newClients);
         Ienumerable<Clients> GetRatingOutput();
+        string PercentToRaiting(Clients newClients);
     }
 }
