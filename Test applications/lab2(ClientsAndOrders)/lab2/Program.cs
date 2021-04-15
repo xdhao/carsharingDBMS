@@ -19,6 +19,11 @@ namespace lab2
             {
                 Console.WriteLine(review);
             }*/
+            var raitingClients = myRep.GetRatingOutput();
+            foreach(var raitingClient in raitingClients)
+            {
+                Console.WriteLine(raitingClient);
+            }
         }
     }
 }
