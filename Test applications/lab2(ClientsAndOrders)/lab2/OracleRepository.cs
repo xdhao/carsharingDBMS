@@ -111,13 +111,25 @@ namespace lab2
             using var con = new OracleConnection(connectionString);
             con.Open();
             string raiting = "SELECT * FROM clients WHERE raiting > 4.5";
-            using var command = new OracleCommand(rating, con);
+            using var command = new OracleCommand(raiting, con);
             using var readreClie = command.ExecuteReader();
             while (readreClie.Read())
             {
                 result.Add(new Clients(readreClie.GetInt32(0), readreClie.GetString(1), readreClie.GetString(2), readreClie.GetString(3), readreClie.GetString(4), readreClie.GetString(5), readreClie.GetString(6), readreClie.GetString(7), readreClie.GetFloat(8), readreClie.GetInt32(9)));
             }
             return result;
+        }
+        
+        string PercentToRaiting(Clients newClients)
+        {
+            using var con = new OracleConnection(connectionString);
+            con.Open();
+            string pecent = "SELECT (SELECT COUNT(id) FROM clients WHERE raiting > :raiting)/COUNT(id)*100 FROM clients";
+            using var command = new OracleCommand(percent, con);
+            OracleParameter parameter = new OracleParameter("raiting", newClients.raiting);
+            command.Parameners.Add(parameter);
+            object count = commant.ExecuteScalar();
+            return count.ToString();
         }
     }
 }
