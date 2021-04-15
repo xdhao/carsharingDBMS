@@ -120,7 +120,7 @@ namespace lab2
             return result;
         }
         
-        string PercentToRaiting(Clients newClients)
+        public string PercentToRaiting(Clients newClients)
         {
             using var con = new OracleConnection(connectionString);
             con.Open();
