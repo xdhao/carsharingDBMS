@@ -11,5 +11,6 @@ namespace lab2
         void DeleteReviews(Reviews newrivews);
         bool UpdateReviews(Reviews newreviews);
         string CalculationOfCost(Clients newClients);
+        Ienumerable<Clients> GetRatingOutput();
     }
 }
