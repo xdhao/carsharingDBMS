@@ -51,7 +51,18 @@ public class MapActivity extends AppCompatActivity{
     {
         db = sqlHelper.getReadableDatabase();
 
-        carCursor =  db.rawQuery("select * from cars", null);
+        Intent intent = getIntent();
+        Boolean filter1 = intent.getBooleanExtra("filter1", false);
+
+        if(filter1)
+        {
+            carCursor =  db.rawQuery("select * from cars where fuel_level > 3", null);
+        }
+        else
+        {
+            carCursor =  db.rawQuery("select * from cars", null);
+        }
+
         String[] headers = new String[] {"lat", "lng"};
 
         mainAdapter = new SimpleCursorAdapter(this, android.R.layout.two_line_list_item,
@@ -63,8 +74,10 @@ public class MapActivity extends AppCompatActivity{
         db.close();
         Intent intent = getIntent();
         Long id = intent.getLongExtra("user_id", 0);
+        Boolean filter1 = intent.getBooleanExtra("filter1", false);
         intent = new Intent(this, SettingsActivity.class);
         intent.putExtra("user_id", id);
+        intent.putExtra("filter1", filter1);
         startActivity(intent);
     }
     public void addCars(View view){

@@ -80,6 +80,7 @@ public class AuthorizationActivity extends AppCompatActivity {
         db.close();
         Intent intent = new Intent(this, MapActivity.class);
         intent.putExtra("user_id", id);
+        intent.putExtra("filter1", false);
         startActivity(intent);
     }
 }

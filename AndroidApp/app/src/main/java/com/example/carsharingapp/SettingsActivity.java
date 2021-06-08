@@ -83,6 +83,7 @@ public class SettingsActivity extends AppCompatActivity{
         db2.close();
         Intent intent = new Intent(this, MapActivity.class);
         intent.putExtra("user_id", selectedId);
+        intent.putExtra("filter1", checkFilter1.isChecked());
         startActivity(intent);
     }
 }
