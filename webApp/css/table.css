@@ -1,0 +1,49 @@
+.tablica {
+	padding-left: 4%;
+}
+
+.table {
+	margin-top: 20px;
+	border: 2px solid #000000;
+	border-collapse: collapse;
+}
+
+.table th {
+	font-weight: bold;
+	padding: 5px;
+	border: 2px solid #000000;
+}
+
+.table td {
+	border: 2px solid #000000;
+	padding: 5px;
+}
+
+.buttons
+{
+  display: inline-block;
+}
+
+.buttons:before
+{
+  float: left;
+  width: 1em;
+  text-align: center;
+  font-size: 1.7em;
+  margin: 0 0.5em 0 -1em;
+  padding: 0 .2em;
+  pointer-events: none;
+}
+
+.add:before    { content: "\271A"; }
+.edit:before   { content: "\270E"; }
+.delete:before { content: "\2718";}
+.save:before   { content: "\2714";}
+.email:before  { content: "\2709";}
+.cross:before  { content: "\2716"; }
+.left_arrow:before { content: "\2190"; }
+
+.Tbname_andbtn {
+	font-size: 26px;
+	padding-left: 1%;
+}
